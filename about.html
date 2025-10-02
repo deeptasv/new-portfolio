@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deepta S V - About</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #1a1a1a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      padding: 20px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      padding: 8px;
+      background: rgba(26, 26, 26, 0.8);
+      border-radius: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+    nav img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    nav .nav-links {
+      display: flex;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 5px;
+      padding: 8px 12px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.3s ease, color 0.3s ease;
+      border-radius: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    nav a:hover,
+    nav a.active {
+      color: black;
+      background: white;
+    }
+    .about-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 0;
+      margin: auto;
+    }
+    .about-content {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+    }
+    .about-content h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      margin: 0;
+      color: white;
+      letter-spacing: -2px;
+    }
+    .about-content p {
+      font-size: 1rem;
+      color: #ccc;
+      line-height: 1.6;
+      margin: 20px 0;
+    }
+    .stats-container {
+      display: flex;
+      gap: 80px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .stat-item h2 {
+      font-size: 3rem;
+      color: #a2d5c6;
+      margin: 0;
+      font-weight: 900;
+    }
+    .stat-item p {
+      margin: 5px 0 0;
+      font-size: 0.9rem;
+      color: #aaa;
+      max-width: 120px;
+    }
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+    .contact-details span {
+      display: block;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #a2d5c6;
+    }
+    .about-image-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .about-image-card {
+      width: 300px;
+      height: auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 40px 10px rgba(162, 213, 198, 0.7);
+      transition: box-shadow 0.3s ease;
+    }
+    .about-image-card:hover {
+      box-shadow: 0 0 60px 15px rgba(162, 213, 198, 0.7);
+    }
+    .about-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    /* New sections */
+    .extra-section {
+      margin-top: 60px;
+      padding: 20px;
+    }
+    .extra-section h2 {
+      color: #a2d5c6;
+      margin-bottom: 15px;
+    }
+    ul {
+      color: #ccc;
+      margin-left: 20px;
+    }
+    video, audio {
+      margin-top: 20px;
+      border-radius: 10px;
+      display: block;
+      max-width: 100%;
+    }
+    /* Scroll button styling */
+    .scroll-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 12px 24px;
+      background: #a2d5c6;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      z-index: 2000;
+      transition: background 0.3s ease;
+    }
+    .scroll-btn:hover {
+      background: #7fbfa6;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>  
+  <div class="container">
+    <nav>
+      <img src="profile-pic.jpg" alt="Profile">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="lists.html">Bucket List</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <!-- First Half -->
+    <div class="about-section">
+      <div class="about-content">
+        <h1>About me</h1>
+        <p>I'm Deepta S V, a dynamic and detail-oriented Computer Science Engineering student. I am a final year B.Tech. student at Mar Baselios College. I have a strong foundation in programming, software development, and database systems. I am proficient in Java, C, and Python, with hands-on experience in machine learning and full-stack web development using the MERN stack. I am skilled in HTML, CSS, JavaScript, and well-versed in managing databases using MySQL and MongoDB.</p>
+        <div class="stats-container">
+          <div class="stat-item">
+            <h2>Final Year</h2>
+            <p>B.Tech. - Computer Science & Engineering at Mar Baselios College</p>
+          </div>
+          <div class="stat-item">
+            <h2>6+</h2>
+            <p>Completed Projects</p>
+          </div>
+        </div>
+        <div class="contact-details">
+          <div>
+            <span>Call Today:</span>
+            <p>+91-9188151617</p>
+          </div>
+          <div>
+            <span>Email:</span>
+            <p>deeptasv.b22cs1219@mbcet.ac.in</p>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="https://github.com/deeptasv" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/deepta-s-v-70bb93254" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="about-image-container">
+        <div class="about-image-card">
+          <img src="profile-pic.jpg" alt="Deepta S V" class="about-image">
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Half -->
+    <div id="second-part" class="extra-section">
+      <h2>My Strengths & Weaknesses</h2>
+      <p>As a computer science student and aspiring technologist, I recognize my core strengths and areas I still work on:</p>
+      <ul>
+        <li><strong>Strengths:</strong> Problem-solving, adaptability, analytical thinking, teamwork, quick learner.</li>
+        <li><strong>Weaknesses:</strong> Perfectionism, sometimes overanalyzing, tend to multitask too much.</li>
+      </ul>
+    </div>
+
+    <div class="extra-section">
+      <h2>My Favorites</h2>
+      <p>Here are some of my favorite media clips that inspire me:</p>
+
+      <!-- Video -->
+      <video controls width="500">
+        <source src="favmovie.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Audio -->
+      <audio controls>
+        <source src="favsong.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
+  <!-- ✅ Scroll Button -->
+  <button class="scroll-btn" id="scrollBtn">↓ Scroll Down</button>
+
+  <script>
+    const scrollBtn = document.getElementById("scrollBtn");
+    const secondPart = document.getElementById("second-part");
+
+    scrollBtn.addEventListener("click", () => {
+      if (scrollBtn.innerText.includes("Down")) {
+        secondPart.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+
+    window.addEventListener("scroll", () => {
+      const halfway = secondPart.offsetTop / 2;
+      if (window.scrollY >= halfway) {
+        scrollBtn.innerText = "↑ Scroll Up";
+      } else {
+        scrollBtn.innerText = "↓ Scroll Down";
+      }
+    });
+  </script>
+</body>
+</html>

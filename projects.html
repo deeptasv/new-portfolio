@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepta S V - Projects</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #1a1a1a;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 100px 20px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            padding: 8px;
+            background: rgba(26, 26, 26, 0.8);
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        nav img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        nav .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 5px;
+            padding: 8px 12px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.3s ease, color 0.3s ease;
+            border-radius: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        nav a:hover,
+        nav a.active {
+            color: black;
+            background: white;
+        }
+        
+        .contact-btn {
+            background: white;
+            color: black;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        
+        .contact-btn:hover {
+            background: #f0f0f0;
+            color: black;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            color: white;
+            letter-spacing: -2px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .project-card {
+            background: #2a2a2a;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .project-icon {
+            font-size: 2.5rem;
+            color: #a2d5c6;
+            margin-right: 15px;
+        }
+
+        .project-card h2 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: #a2d5c6;
+        }
+
+        .project-card .details {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+        
+        .project-card p {
+            font-size: 1rem;
+            color: #ccc;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .skill-tag {
+            background: #3a3a3a;
+            color: #ddd;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: auto;
+            align-self: flex-start;
+            color: black;
+            background-color: #a2d5c6;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-card a:hover {
+            background-color: #a2d5c6;
+        }
+        
+        @media (max-width: 1024px) {
+            nav {
+                width: 90%;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                top: 10px;
+            }
+            
+            nav .nav-links {
+                display: none;
+            }
+            
+            .contact-btn {
+                margin-left: auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="profile-pic.jpg" alt="Profile">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="lists.html">Bucket List</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            
+        </nav>
+        
+        <h1>My Projects</h1>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fas fa-trash-can project-icon"></i>
+                    <h2>Illegal Waste Detection System</h2>
+                </div>
+                <div class="details">Mentor: Jisha John | Team Size: 10</div>
+                <p>An AI-based system aimed at detecting unauthorized waste disposal in public areas as part of a smart surveillance solution for Smart city Thiruvananthapuram. </p>
+                <div class="skills-list">
+                    <span class="skill-tag">AI</span>
+                    <span class="skill-tag">ML</span>
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">Python</span>
+                </div>
+                <a href="https://github.com/edwinjojie/Smart_city_project" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fas fa-seedling project-icon"></i>
+                    <h2>Direct Market Access app (jeevani)</h2>
+                </div>
+                <div class="details">Mentor: Ms Gaurishree VK | Team Size: 4</div>
+               <p>A mobile and cloud-based application that bridges the gap between farmers and buyers with AI-driven forecasting. </p>
+                <div class="skills-list">
+                    <span class="skill-tag">React.js</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">ML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">HTML</span>
+                </div>
+                <a href="https://github.com/deeptasv/jeevaniapp" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fas fa-book project-icon"></i>
+                    <h2>Bookstore library App</h2>
+                </div>
+                <div class="details">Mentor: Ms. Mridula | Team Size: 4</div>
+                <p>A responsive library management web application using React and Material-UI for a clean, user-friendly interface. </p>
+                <div class="skills-list">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">Javascript</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">React.js</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">MongoDB</span>
+                </div>
+                <a href="https://github.com/deeptasv/ict_project" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fas fa-notes-medical project-icon"></i>
+                    <h2>Ayush Website</h2>
+                </div>
+                <div class="details">Team Size: 6</div>
+                <p>An easy-to-use and user-friendly website for the AYUSH Department, designed to simplify public access to services and information. </p>
+                <div class="skills-list">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">Javascript</span>
+                </div>
+                <a href="https://github.com/deeptasv/ayush" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fas fa-brain project-icon"></i>
+                    <h2>Autism Detection using ML</h2>
+                </div>
+                <div class="details">Microproject</div>
+               <p>A machine learning-based screening tool to assist in the early detection of Autism Spectrum Disorder (ASD) in adults. </p>
+                <div class="skills-list">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Scikit-learn</span>
+                    <span class="skill-tag">SVM</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">Seaborn</span>
+                </div>
+                </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fas fa-coins project-icon"></i>
+                    <h2>Currency converter</h2>
+                </div>
+                <div class="details">Microproject</div>
+                <p>A currency conversion desktop application using Java Swing to create an interactive and user-friendly graphical user interface (GUI). </p>
+                <div class="skills-list">
+                    <span class="skill-tag">Java Swing</span>
+                    <span class="skill-tag">GUI</span>
+                </div>
+                </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fas fa-music project-icon"></i>
+                    <h2>Website for dance school</h2>
+                </div>
+                <div class="details">Team Size: 1</div>
+              <p>A website created for the sivaparvathy dance school in Thiruvananthapuram. </p>
+                <div class="skills-list">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

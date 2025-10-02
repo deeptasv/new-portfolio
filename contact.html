@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepta S V - Contact</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #1a1a1a;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 100px 20px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            padding: 8px;
+            background: rgba(26, 26, 26, 0.8);
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        nav img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        nav .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 5px;
+            padding: 8px 12px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.3s ease, color 0.3s ease;
+            border-radius: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        nav a:hover,
+        nav a.active {
+            color: black;
+            background: white;
+        }
+        
+        .contact-btn {
+            background: white;
+            color: black;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        
+        .contact-btn:hover {
+            background: #f0f0f0;
+            color: black;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            color: white;
+            letter-spacing: -2px;
+        }
+
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .contact-form-card {
+            flex: 2;
+            min-width: 300px;
+            background: #2a2a2a;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-details-card {
+            flex: 1;
+            min-width: 250px;
+            background: #2a2a2a;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .contact-form-card h2, .contact-details-card h2 {
+            margin-top: 0;
+            color: #a2d5c6;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            background: #3a3a3a;
+            border: 1px solid #555;
+            border-radius: 5px;
+            color: white;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .submit-btn {
+            background-color: #a2d5c6;
+            color: black;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #a2d5c6;
+        }
+        
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .detail-item i {
+            font-size: 1.5rem;
+            color: #a2d5c6;
+        }
+
+        .detail-item p {
+            margin: 0;
+        }
+        
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #a2d5c6;
+        }
+
+        @media (max-width: 1024px) {
+            nav {
+                width: 90%;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                top: 10px;
+            }
+            
+            nav .nav-links {
+                display: none;
+            }
+            
+            .contact-btn {
+                margin-left: auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="profile-pic.jpg" alt="Profile">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="lists.html">Bucket List</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+            
+        </nav>
+        
+        <h1>Get in Touch</h1>
+
+        <div class="contact-content">
+            <div class="contact-form-card">
+                <h2>Send me a message</h2>
+                <form action="https://formsubmit.co/deepta.sv@gmail.com" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="contact-details-card">
+                <h2>My Contact Details</h2>
+                <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+91-9188151617</p>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>deepta.sv@gmail.com</p>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Deeptham, Sheela teacher Road, Venjaramoodu P.O., Thiruvananthapuram, Kerala, India - 695607</p>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="https://github.com/deeptasv" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/deepta-s-v-70bb93254" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
