@@ -73,22 +73,6 @@
       color: black;
       background: white;
     }
-    
-    .contact-btn {
-      background: white;
-      color: black;
-      padding: 8px 16px;
-      border-radius: 20px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-    
-    .contact-btn:hover {
-      background: #f0f0f0;
-      color: black;
-    }
 
     .hero-section {
       display: flex;
@@ -96,7 +80,7 @@
       align-items: center;
       position: relative;
       padding-top: 25px;
-      padding-bottom: 50px;
+      padding-bottom: 25px; /* Reduced since button is gone */
       min-height: 100vh;
       flex-direction: column;
     }
@@ -169,25 +153,6 @@
       margin: 0;
     }
 
-    /* Button styling */
-    .action-btn {
-      padding: 12px 24px;
-      background: none;
-      color: #a2d5c6;
-      border: 2px solid #a2d5c6;
-      border-radius: 30px;
-      text-transform: uppercase;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s ease, color 0.3s ease;
-      margin-top: 30px;
-    }
-
-    .action-btn:hover {
-      background: #a2d5c6;
-      color: black;
-    }
-
     @media (max-width: 1024px) {
       .hero-text h1 {
         font-size: 4rem;
@@ -203,7 +168,6 @@
       }
       .profile-img-container {
         margin: 40px 0;
-        transform: rotate(0deg);
       }
       .text-left, .text-right {
         padding: 0;
@@ -215,14 +179,11 @@
       nav {
         width: 90%;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         top: 10px;
       }
       nav .nav-links {
-        display: none;
-      }
-      .contact-btn {
-        margin-left: auto;
+        display: flex; /* Kept display flex for navigation */
       }
     }
 
@@ -243,7 +204,7 @@
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="skills.html">Skills</a>
-        <a href="lists.html">Bucket List</a>
+        
         <a href="contact.html">Contact</a>
       </div>
     </nav>
@@ -257,7 +218,6 @@
           </div>
         </div>
 
-        <!-- ✅ Clickable profile photo -->
         <div class="profile-img-container">
           <a href="https://www.linkedin.com/in/deepta-s-v-70bb93254" target="_blank">
             <img src="profile-pic.jpg" alt="Deepta S V" class="profile-img">
@@ -273,16 +233,7 @@
           </div>
         </div>
       </div>
-
-      <!-- ✅ Button with JS alert -->
-      <button class="action-btn" onclick="welcomeMessage()">Say Hello</button>
     </div>
   </div>
-
-  <script>
-    function welcomeMessage() {
-      alert("Hello, welcome to my portfolio page!");
-    }
-  </script>
 </body>
 </html>

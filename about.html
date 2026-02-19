@@ -156,44 +156,6 @@
       height: auto;
       display: block;
     }
-    /* New sections */
-    .extra-section {
-      margin-top: 60px;
-      padding: 20px;
-    }
-    .extra-section h2 {
-      color: #a2d5c6;
-      margin-bottom: 15px;
-    }
-    ul {
-      color: #ccc;
-      margin-left: 20px;
-    }
-    video, audio {
-      margin-top: 20px;
-      border-radius: 10px;
-      display: block;
-      max-width: 100%;
-    }
-    /* Scroll button styling */
-    .scroll-btn {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 12px 24px;
-      background: #a2d5c6;
-      color: black;
-      font-weight: bold;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      z-index: 2000;
-      transition: background 0.3s ease;
-    }
-    .scroll-btn:hover {
-      background: #7fbfa6;
-    }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -206,16 +168,16 @@
         <a href="about.html" class="active">About</a>
         <a href="projects.html">Projects</a>
         <a href="skills.html">Skills</a>
-        <a href="lists.html">Bucket List</a>
+        
         <a href="contact.html">Contact</a>
       </div>
     </nav>
 
-    <!-- First Half -->
     <div class="about-section">
       <div class="about-content">
         <h1>About me</h1>
         <p>I'm Deepta S V, a dynamic and detail-oriented Computer Science Engineering student. I am a final year B.Tech. student at Mar Baselios College. I have a strong foundation in programming, software development, and database systems. I am proficient in Java, C, and Python, with hands-on experience in machine learning and full-stack web development using the MERN stack. I am skilled in HTML, CSS, JavaScript, and well-versed in managing databases using MySQL and MongoDB.</p>
+        
         <div class="stats-container">
           <div class="stat-item">
             <h2>Final Year</h2>
@@ -226,6 +188,7 @@
             <p>Completed Projects</p>
           </div>
         </div>
+
         <div class="contact-details">
           <div>
             <span>Call Today:</span>
@@ -236,69 +199,20 @@
             <p>deeptasv.b22cs1219@mbcet.ac.in</p>
           </div>
         </div>
+
         <div class="social-icons">
           <a href="https://github.com/deeptasv" target="_blank"><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/deepta-s-v-70bb93254" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
+
       <div class="about-image-container">
         <div class="about-image-card">
           <img src="profile-pic.jpg" alt="Deepta S V" class="about-image">
         </div>
       </div>
     </div>
-
-    <!-- Second Half -->
-    <div id="second-part" class="extra-section">
-      <h2>My Strengths & Weaknesses</h2>
-      <p>As a computer science student and aspiring technologist, I recognize my core strengths and areas I still work on:</p>
-      <ul>
-        <li><strong>Strengths:</strong> Problem-solving, adaptability, analytical thinking, teamwork, quick learner.</li>
-        <li><strong>Weaknesses:</strong> Perfectionism, sometimes overanalyzing, tend to multitask too much.</li>
-      </ul>
-    </div>
-
-    <div class="extra-section">
-      <h2>My Favorites</h2>
-      <p>Here are some of my favorite media clips that inspire me:</p>
-
-      <!-- Video -->
-      <video controls width="500">
-        <source src="vdio.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-
-      <!-- Audio -->
-      <audio controls>
-        <source src="cascade-breathe-future-garage-412839.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-    </div>
   </div>
 
-  <!-- ✅ Scroll Button -->
-  <button class="scroll-btn" id="scrollBtn">↓ Scroll Down</button>
-
-  <script>
-    const scrollBtn = document.getElementById("scrollBtn");
-    const secondPart = document.getElementById("second-part");
-
-    scrollBtn.addEventListener("click", () => {
-      if (scrollBtn.innerText.includes("Down")) {
-        secondPart.scrollIntoView({ behavior: "smooth" });
-      } else {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    });
-
-    window.addEventListener("scroll", () => {
-      const halfway = secondPart.offsetTop / 2;
-      if (window.scrollY >= halfway) {
-        scrollBtn.innerText = "↑ Scroll Up";
-      } else {
-        scrollBtn.innerText = "↓ Scroll Down";
-      }
-    });
-  </script>
 </body>
 </html>
